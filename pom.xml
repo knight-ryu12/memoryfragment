@@ -21,7 +21,6 @@
             <version>3.3.1_301</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -31,6 +30,19 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>net.chromaryu.mf.start</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <addExtensions>true</addExtensions>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
